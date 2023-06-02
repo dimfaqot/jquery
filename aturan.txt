@@ -1,0 +1,130 @@
+ATURAN PEMBUATAN NAMA VARIABLE/FUNCTION
+
+tujuan->nama: contoh inputtype= tujuannya untuk input, namanya adalah type
+
+SEARCH
+$(document).on('keyup', '.cari', function(e) {
+        e.preventDefault();
+
+        let value = $(this).val().toLowerCase();
+
+        $('.body_cari tr').filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+    });
+
+
+CATATAN BOOTSTRAP
+
+Hide sm show md
+d-none d-md-table-cell
+
+vertical center
+ <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+</div>
+
+layar besar ada layar kecil hilang
+ <div class="col-md-6 d-none d-md-block">
+
+OPEN MODAL USING JS
+  let myModal = document.getElementById('tambah_manual');
+        let modal = bootstrap.Modal.getOrCreateInstance(myModal)
+        modal.show()
+
+$('#modal_'+modal+'_'+id).modal('hide');
+
+horizontal n vertical center
+
+<div class="d-flex flex-column min-vh-100 min-vw-100">
+    <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+        <div>This div is centered.</div>
+    </div>
+</div>
+
+PHP
+
+DB
+ $db = \Config\Database::connect();
+        $db = $db->table('inv');
+
+session()->setFlashdata('gagal', 'Data tidak ditemukan!.');
+            header("Location: " . base_url($this->url));
+            die;
+
+
+
+CATATAN JQUERY
+
+menghapus value di semua kelas kecuali this
+
+ $('.searchselect').not(this).val('');
+
+mengumpulkan semua value dari kelas yang sama
+let inputs = $(".searchselect");
+        for (let i = 0; i < inputs.length; i++) {
+            let val = $(inputs[i]).val();
+            if(val !==''){
+
+            }
+        }
+
+mengukpulkan semua value dari kelas yang sama
+var values = [];
+            $('.ids').each(function() {
+                values.push(this.value);
+            });
+
+mengecek apakah value ada di dalam array
+if (jQuery.inArray('' + id + '', values) !== -1) {
+                gagal('Data sudah ada!.');
+                return false;
+            }
+
+memilih radio/checkbox yang tercentang
+val = $('input[name="' + order + replacespace(menu.toLowerCase()) + labels[i] + '"]:checked').val();
+
+jika banyak
+$('input[name="checkselected"]:checked').each(function() {
+                values.push(this.value);
+            })
+
+mencari last index
+   if (arr[arr.length - 1] === 'id') {
+                            // do something
+                         }
+
+ post('order/save', {
+                   id:'
+                })
+                .then(res => {
+                    if (res.status == '200') {
+
+                      sukses();
+              
+
+
+                    }
+
+                })
+
+Mengambil slected text
+$( "#myselect option:selected" ).text();
+
+CSS
+bg image
+<div class="col-2" style="background-image: url('https://ponpeswalisongosragen.com/pusatdata/berkas/profile.jpg');background-position:center;background-repeat:no-repeat;background-size:contain">
+
+
+GITHUB
+…or create a new repository on the command line
+echo "# walisongoweb" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/dimfaqot/walisongoweb.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/dimfaqot/walisongoweb.git
+git branch -M main
+git push -u origin main
